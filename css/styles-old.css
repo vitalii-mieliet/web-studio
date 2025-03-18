@@ -24,73 +24,14 @@
 }
 
 /* !==================== */
-/* #region HEADER STYLES */
-
-
-
-
-
-
-}
-/* #endregion */
-/* !==================== */
 /* #region HERO STYLES */
-.hero {
-  background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-  background-repeat: no-repeat;
-  max-width: 1440px;
-  background-position: center;
-  background-size: cover;
-  padding: 188px 0;
-  margin: auto;
-}
 
 .hero-title {
   max-width: 496px;
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  color: #fff;
   letter-spacing: 0.02em;
-  text-align: center;
   margin: 0 auto 48px;
-}
-
-.hero .button {
-  min-width: 169px;
-  padding: 16px 32px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-.hero-button {
-  display: block;
-  margin: auto;
-  background-color: #4d5ae5;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border-radius: 4px;
-
-  min-width: 169px;
-  padding: 16px 32px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404bbf;
 }
 
 /* #endregion */
