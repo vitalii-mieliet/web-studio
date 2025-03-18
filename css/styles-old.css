@@ -24,43 +24,6 @@
 }
 
 /* !==================== */
-/* #region HERO STYLES */
-
-.hero-title {
-  max-width: 496px;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  margin: 0 auto 48px;
-}
-
-/* #endregion */
-/* !==================== */
-/* #region BENEFITS STYLES */
-
-.core-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.core-item {
-  width: calc((100% - 72px) / 4);
-  display: block;
-}
-
-.icon-wraper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background: #f4f4fd;
-  height: 112px;
-  margin-bottom: 8px;
-}
-/* #endregion */
-/* !==================== */
 /* #region TEAM STYLES */
 
 .team-section {
@@ -238,9 +201,6 @@
 
 /* Subcribe form */
 
-.footer-form-container {
-}
-
 .footer-form {
   display: flex;
   align-items: end;
@@ -248,8 +208,6 @@
   max-width: 453px;
 }
 
-.subscribe-label {
-}
 .subscribe-input {
   color: #fff;
   font-size: 12px;
@@ -396,8 +354,6 @@
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
-}
-.contact-form {
 }
 
 .contact-form-field {
