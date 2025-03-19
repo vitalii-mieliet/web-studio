@@ -743,6 +743,8 @@ html {
 .project-card-img {
   position: relative;
   overflow: hidden;
+  width: 288px;
+  height: 280px;
 }
 
 .project-card-overlay {
@@ -784,6 +786,11 @@ html {
   .project-card {
     flex-basis: calc((100% - 24px) / 2);
   }
+
+  .project-card-img {
+    width: 356px;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -793,6 +800,10 @@ html {
 
   .project-card {
     flex-basis: calc((100% - 48px) / 3);
+  }
+
+  .project-card-img {
+    width: 360px;
   }
 }
 /* #endregion */
