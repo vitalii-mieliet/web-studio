@@ -179,7 +179,7 @@ html {
 
 .button:hover,
 .button:focus {
-  background-color: #404bbf;
+  background-color: var(--ocean);
 }
 
 .social-links {
@@ -201,7 +201,7 @@ html {
   height: 100%;
 }
 
-.modal-close-btn {
+.close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -213,27 +213,27 @@ html {
   width: 24px;
   height: 24px;
   padding: 0;
-  background-color: transparent;
+  background-color: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   transition: background-color var(--animation) border var(--animation);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.close-btn:hover,
+.close-btn:focus {
   background-color: var(--ocean);
   border: none;
 }
 
-.modal-close-btn .icon {
+.close-btn .icon {
   fill: var(--navy-blue);
   padding: 0;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover .icon,
-.modal-close-btn:focus .icon {
+.close-btn:hover .icon,
+.close-btn:focus .icon {
   fill: var(--white);
 }
 
@@ -263,7 +263,6 @@ html {
 
 /* #endregion */
 /* !==================== */
-/* todo Chek styles in Header */
 /* #region HEADER STYLES */
 
 .page-header {
@@ -285,7 +284,7 @@ html {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--iris);
 }
 
 .header-logo {
@@ -294,7 +293,7 @@ html {
 }
 
 .header-logo .logo-part {
-  color: #2e2f42;
+  color: var(--navy-blue);
 }
 
 .nav-list,
@@ -346,12 +345,12 @@ html {
     transition-property: color var(--animation);
   }
 
-  .nav-link.curent {
+  .nav-link.current {
     position: relative;
     color: var(--ocean);
   }
 
-  .nav-link.curent::after {
+  .nav-link.current::after {
     content: '';
 
     position: absolute;
@@ -410,7 +409,6 @@ html {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
 
     color: var(--slate);
 
@@ -467,10 +465,6 @@ html {
   transition-property: color var(--animation);
 }
 
-.mobile-menu-nav-link.curent {
-  color: var(--ocean);
-}
-
 .mobile-menu-contacts {
   display: block;
   padding-bottom: 48px;
@@ -504,6 +498,11 @@ html {
 .mobile-social-links {
   display: flex;
   justify-content: space-between;
+}
+
+.mobile-menu .social-link:hover,
+.mobile-menu .social-link:focus {
+  background-color: var(--green);
 }
 
 @media screen and (min-width: 768px) {
@@ -757,7 +756,7 @@ html {
   height: 100%;
 
   transform: translateY(100%);
-  transition-property: transform var(--animation);
+  transition: transform var(--animation);
 }
 
 .project-card:hover {
@@ -1026,9 +1025,15 @@ html {
   transform: translate(-50%, -50%);
   transition: transform var(--animation);
 }
-/* Close button stules are located in COMPONENT STYLES */
-.modal .modal-close-btn {
+/* Close button stles are located in COMPONENT STYLES */
+.modal .close-btn {
   background-color: var(--cornflower);
+}
+
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+  background-color: var(--ocean);
+  border: none;
 }
 
 .modal-title {
@@ -1067,7 +1072,7 @@ html {
   line-height: 1.17;
   letter-spacing: 0.04em;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animation);
 }
 
 .contact-form-input:focus {
@@ -1143,10 +1148,7 @@ html {
   color: var(--iris);
 }
 
-.form-button:hover,
-.form-button:focus {
-  background-color: var(--ocean);
-}
+/* Button styles are located in COMPONENT STYLES */
 
 @media screen and (min-width: 768px) {
   .modal {
