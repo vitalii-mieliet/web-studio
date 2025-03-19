@@ -516,12 +516,11 @@ html {
 /* #region HERO STYLES */
 
 .hero {
+  max-width: 320px;
   background-color: #2e2f42;
   background-image: linear-gradient(var(--grey), var(--grey)),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
-  min-width: none;
-  -width: 320px;
   background-position: center;
   background-size: cover;
   padding: 72px 0;
