@@ -193,6 +193,56 @@ html {
   gap: 24px;
 }
 
+/* MODAL CLOSE BUTTON */
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: background-color var(--animation) border var(--animation);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--ocean);
+  border: none;
+}
+
+.modal-close-btn .icon {
+  fill: var(--navy-blue);
+  padding: 0;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .icon,
+.modal-close-btn:focus .icon {
+  fill: var(--white);
+}
+
+/* SOCIAL LINK ITEM */
+
 .social-link-item {
   width: 40px;
   height: 40px;
@@ -302,7 +352,7 @@ html {
 
   .nav-link.curent {
     position: relative;
-    color: #404bbf;
+    color: var(--ocean);
   }
 
   .nav-link.curent::after {
@@ -376,6 +426,7 @@ html {
 /* !==================== */
 /* todo Add styles to mobile menu */
 /* #region MOBILE MENU */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -397,23 +448,65 @@ html {
   pointer-events: auto;
 }
 
-.mobile-menu-container {
-  position: relative;
-  padding-top: 72px;
-  padding-bottom: 40px;
-
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.mobile-menu-close-button {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-}
+/* Close button styles are located in COMPONENT STYLES */
 
 .mobile-menu-nav {
   margin-bottom: auto;
+}
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.mobile-menu-nav-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  transition-property: color var(--animation);
+}
+
+.mobile-menu-nav-link.curent {
+  color: var(--ocean);
+}
+
+.mobile-menu-contacts {
+  display: block;
+  padding-bottom: 48px;
+}
+
+.mobile-menu-contacts-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.mobile-menu-contacts-link {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--slate);
+
+  transition: color var(--animation);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--ocean);
+}
+
+.mobile-social-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -936,43 +1029,9 @@ html {
   transform: translate(-50%, -50%);
   transition: transform var(--animation);
 }
-
-.modal-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-
+/* Close button stules are located in COMPONENT STYLES */
+.modal .modal-close-btn {
   background-color: var(--cornflower);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  background-color: var(--ocean);
-  border: none;
-}
-
-.modal-close-btn .icon {
-  fill: var(--navy-blue);
-  padding: 0;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-btn:hover .icon,
-.modal-close-btn:focus .icon {
-  fill: var(--white);
 }
 
 .modal-title {

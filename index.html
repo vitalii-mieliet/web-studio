@@ -32,14 +32,16 @@
               <a href="./index.html" class="nav-link curent">Studio</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Portfolio</a>
+              <a href="#portfolio" class="nav-link">Portfolio</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Contacts</a>
+              <a href="footer" class="nav-link">Contacts</a>
             </li>
           </ul>
         </nav>
+
         <!-- Contacts -->
+
         <address class="contacts">
           <ul class="contacts-list">
             <li>
@@ -47,7 +49,7 @@
                 >info@devstudio.com</a
               >
             </li>
-            <li class="contacts">
+            <li>
               <a class="contacts-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
@@ -55,18 +57,90 @@
           </ul>
         </address>
 
-        <button class="burger-button" type="button">
+        <!-- GAMBURGER BUTTON -->
+
+        <button class="burger-button js-open-menu" type="button">
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
+
+      <!-- MOBILE NENU -->
+
       <div class="mobile-menu">
         <div class="container mobile-menu-container">
-          <button class="mobile-menu-close-button">Close</button>
-          <nav class="mobile-menu-nav">Navigation</nav>
-          <address class="mobile-menu-contacts">Contacts</address>
-          <div class="mobile-menu-social">Social Links</div>
+          <button type="button" class="modal-close-btn js-close-menu">
+            <svg width="8" height="8" class="icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-nav-list">
+              <li>
+                <a href="./index.html" class="mobile-menu-nav-link curent"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a href="#portfolio" class="mobile-menu-nav-link">Portfolio</a>
+              </li>
+              <li>
+                <a href="footer" class="mobile-menu-nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="mobile-menu-contacts">
+            <ul class="mobile-menu-contacts-list">
+              <li>
+                <a class="mobile-menu-contacts-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a
+                  class="mobile-menu-contacts-link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <div class="mobile-menu-social-media">
+            <ul class="mobile-social-links">
+              <li class="social-link-item">
+                <a href="#" class="social-link">
+                  <svg width="24" height="24" class="icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a href="#" class="social-link">
+                  <svg width="24" height="24" class="icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a href="#" class="social-link">
+                  <svg width="24" height="24" class="icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a href="#" class="social-link">
+                  <svg width="24" height="24" class="icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -79,7 +153,9 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button">Order Service</button>
+          <button type="button" class="button js-open-form">
+            Order Service
+          </button>
         </div>
       </section>
       <!-- #endregion -->
@@ -331,7 +407,7 @@
       <!-- #endregion -->
 
       <!-- #region OUR PORTFOLIO -->
-      <section class="section projects">
+      <section class="section projects" id="portfolio">
         <div class="container">
           <h2 class="heading-two">Our Portfolio</h2>
 
@@ -483,7 +559,7 @@
 
     <!-- #region FOOTER -->
 
-    <footer class="page-footer">
+    <footer class="page-footer" id="footer">
       <div class="container footer-container">
         <!-- LOGO & Text -->
 
@@ -562,7 +638,7 @@
 
     <div class="backdrop">
       <div class="modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="modal-close-btn js-close-form">
           <svg width="8" height="8" class="icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -639,9 +715,9 @@
               </span>
               <span>
                 I accept the terms and conditions of the
-                <a class="privacy-link" href="#">Privacy Policy</a></label>
-              </span>
-            
+                <a class="privacy-link" href="#">Privacy Policy</a>
+              </span></label
+            >
           </div>
 
           <button type="submit" class="button">Send</button>
@@ -652,18 +728,25 @@
     <!-- #endregion -->
 
     <!-- #region MODAL SCRIPT -->
-    <!-- <script>
+    <script>
       // close modal
-      document
-        .querySelector(".modal-close-btn")
-        .addEventListener("click", () => {
-          document.querySelector(".backdrop").classList.remove("is-open");
-        });
-        // open modal
-      document.querySelector(".btn-review").addEventListener("click", () => {
-        document.querySelector(".backdrop").classList.add("is-open");
+      document.querySelector('.js-close-form').addEventListener('click', () => {
+        document.querySelector('.backdrop').classList.remove('is-open');
       });
-    </script> -->
+      // open modal
+      document.querySelector('.js-open-form').addEventListener('click', () => {
+        document.querySelector('.backdrop').classList.add('is-open');
+      });
+
+      // close menu
+      document.querySelector('.js-close-menu').addEventListener('click', () => {
+        document.querySelector('.mobile-menu').classList.remove('is-open');
+      });
+      // open menu
+      document.querySelector('.js-open-menu').addEventListener('click', () => {
+        document.querySelector('.mobile-menu').classList.add('is-open');
+      });
+    </script>
     <!-- #endregion -->
   </body>
 </html>
