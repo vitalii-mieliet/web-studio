@@ -1,7 +1,3 @@
-.hidden {
-  display: none;
-}
-
 /* #region ROOT */
 :root {
   --iris: #4d5ae5;
@@ -424,7 +420,6 @@ html {
 
 /* #endregion */
 /* !==================== */
-/* todo Add styles to mobile menu */
 /* #region MOBILE MENU */
 
 .mobile-menu {
@@ -525,7 +520,8 @@ html {
   background-image: linear-gradient(var(--grey), var(--grey)),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
-  max-width: 320px;
+  min-width: none;
+  -width: 320px;
   background-position: center;
   background-size: cover;
   padding: 72px 0;
