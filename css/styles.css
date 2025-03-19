@@ -538,6 +538,7 @@ html {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
+  letter-spacing: 0.02em;
   color: var(--white);
   text-align: center;
   margin: 0 auto 72px;
