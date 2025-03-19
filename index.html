@@ -22,6 +22,7 @@
     <header class="page-header">
       <div class="container header-container">
         <!-- Navigation -->
+        <!-- todo Add ankor link in menu -->
         <nav class="header-nav">
           <a href="./index.html" class="logo header-logo"
             >Web<span class="logo-part">Studio</span></a
@@ -559,7 +560,7 @@
 
     <!-- #region MODAL -->
 
-    <div class="modal-overlay hidden">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg width="8" height="8" class="icon">
@@ -636,16 +637,33 @@
                   <use href="./images/icons.svg#icon-chekmark"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="privacy-link" href="#">Privacy Policy</a></label
-            >
+              <span>
+                I accept the terms and conditions of the
+                <a class="privacy-link" href="#">Privacy Policy</a></label>
+              </span>
+            
           </div>
 
-          <button type="submit" class="form-button">Send</button>
+          <button type="submit" class="button">Send</button>
         </form>
       </div>
     </div>
 
+    <!-- #endregion -->
+
+    <!-- #region MODAL SCRIPT -->
+    <!-- <script>
+      // close modal
+      document
+        .querySelector(".modal-close-btn")
+        .addEventListener("click", () => {
+          document.querySelector(".backdrop").classList.remove("is-open");
+        });
+        // open modal
+      document.querySelector(".btn-review").addEventListener("click", () => {
+        document.querySelector(".backdrop").classList.add("is-open");
+      });
+    </script> -->
     <!-- #endregion -->
   </body>
 </html>

@@ -98,6 +98,10 @@ body {
   background-color: var(--white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 320px;
   padding: 0 16px;
@@ -423,10 +427,7 @@ body {
 
 .hero {
   background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(var(--grey), var(--grey)),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   max-width: 320px;
@@ -438,10 +439,7 @@ body {
 
 @media (min-resolution: 192dpi) {
   .hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
+    background-image: linear-gradient(var(--grey), var(--grey)),
       url(../images/people-office@2x.jpg);
   }
 }
@@ -893,3 +891,212 @@ body {
 
 /* #endregion Footer */
 /* !==================== */
+/* #region MODAL FORM STYLE */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--navy-blue-modal);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity var(--animation);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 4px;
+  width: 288px;
+  min-height: 623px;
+
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: var(--dairy);
+
+  padding: 72px 16px 24px 16px;
+
+  transform: translate(-50%, -50%);
+  transition: transform var(--animation);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  background-color: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--ocean);
+  border: none;
+}
+
+.modal-close-btn .icon {
+  fill: var(--navy-blue);
+  padding: 0;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .icon,
+.modal-close-btn:focus .icon {
+  fill: var(--white);
+}
+
+.modal-title {
+  font-weight: 500;
+  text-align: center;
+  color: var(--navy-blue);
+  margin-bottom: 16px;
+}
+
+.contact-form-field {
+  margin-bottom: 8px;
+}
+
+.contact-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  margin-bottom: 4px;
+}
+
+.contact-input-container {
+  position: relative;
+}
+
+.contact-form-input {
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-input:focus {
+  border-color: var(--iris);
+}
+
+.contact-input-icon {
+  fill: var(--navy-blue);
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill var(--animation);
+}
+
+.contact-form-input:focus + .contact-input-icon {
+  fill: var(--iris);
+}
+
+.contact-form-comment {
+  margin-bottom: 16px;
+}
+
+.contact-form-input:last-child {
+  height: 120px;
+  padding: 8px 16px;
+  color: var(--navy-blue-modal);
+}
+
+.contact-form-input::placeholder {
+  color: var(--navy-blue-modal);
+}
+
+.user-privacy-field {
+  margin-bottom: 24px;
+}
+/* Checkbox */
+
+.checkbox-field {
+  margin-bottom: 24px;
+}
+
+.contact-form-label:last-child {
+  display: flex;
+  column-gap: 7px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.custom-chekbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  fill: transparent;
+  border: 1px solid var(--navy-blue-modal);
+  transition: background-color var(--animation), border var(--animation),
+    fill var(--animation);
+}
+
+.checkbox:checked + .contact-form-label > .custom-chekbox {
+  background-color: var(--ocean);
+  fill: var(--cloud);
+  border: none;
+}
+
+.privacy-link {
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--iris);
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--ocean);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+/* #endregion */
