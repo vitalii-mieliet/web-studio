@@ -705,7 +705,7 @@ html {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.member-card:hover .social-link,
+.member-card .social-link:hover,
 .member-card .social-link:focus {
   background-color: var(--ocean);
 }
