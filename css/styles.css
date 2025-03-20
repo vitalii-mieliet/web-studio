@@ -516,9 +516,9 @@ html {
 
 .hero {
   max-width: 320px;
-  background-color: #2e2f42;
+  background-color: var(--navy-blue);
   background-image: linear-gradient(var(--grey), var(--grey)),
-    url(../images/people-office.jpg);
+    url(../images/background/mob-bg_hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -526,10 +526,38 @@ html {
   margin: auto;
 }
 
-@media (min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(var(--grey), var(--grey)),
-      url(../images/people-office@2x.jpg);
+      url('../images/background/mob-bg_hero@2x.jpg');
+  }
+}
+
+@media screen and (min-resolution: 96dpi) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url('../images/background/tab-bg_hero.jpg');
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url('../images/background/tab-bg_hero@2x.jpg');
+  }
+}
+
+@media screen and (min-resolution: 96dpi) and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url('../images/background/desktop-bg_hero.jpg');
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url('../images/background/desktop-bg_hero@2x.jpg');
   }
 }
 
@@ -743,8 +771,6 @@ html {
 .project-card-img {
   position: relative;
   overflow: hidden;
-  width: 288px;
-  height: 280px;
 }
 
 .project-card-overlay {
@@ -786,11 +812,6 @@ html {
   .project-card {
     flex-basis: calc((100% - 24px) / 2);
   }
-
-  .project-card-img {
-    width: 356px;
-    height: 300px;
-  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -800,10 +821,6 @@ html {
 
   .project-card {
     flex-basis: calc((100% - 48px) / 3);
-  }
-
-  .project-card-img {
-    width: 360px;
   }
 }
 /* #endregion */
