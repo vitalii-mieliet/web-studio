@@ -191,16 +191,6 @@ html {
 
 /* MODAL CLOSE BUTTON */
 
-.mobile-menu-container {
-  position: relative;
-  padding-top: 72px;
-  padding-bottom: 40px;
-
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .close-btn {
   position: absolute;
   top: 24px;
@@ -342,7 +332,7 @@ html {
     letter-spacing: 0.02em;
     color: var(--navy-blue);
 
-    transition-property: color var(--animation);
+    transition: color var(--animation);
   }
 
   .nav-link.current {
@@ -437,6 +427,16 @@ html {
   transition: opacity var(--animation), visibility var(--animation);
 }
 
+.mobile-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
@@ -488,10 +488,10 @@ html {
   transition: color var(--animation);
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
+.mobile-menu-nav-link:hover,
+.mobile-menu-nav-link:focus,
+.mobile-menu-contacts-link:hover,
+.mobile-menu-contacts-link:focus {
   color: var(--ocean);
 }
 
