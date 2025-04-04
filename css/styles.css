@@ -94,6 +94,18 @@ body {
   background-color: var(--white);
 }
 
+@media only screen and (max-width: 1157px) {
+  body {
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
