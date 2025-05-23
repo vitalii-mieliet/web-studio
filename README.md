@@ -1,4 +1,4 @@
-# 🌐 Web Portfolio — WebStudio
+# 🌐 WebStudio
 
 This project is part of the GoIT educational program. It is a multi-page responsive web portfolio demonstrating HTML and CSS skills, including form styling and validation. The project follows modern web development practices and implements adaptive design.
 
