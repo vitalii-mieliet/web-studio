@@ -1,12 +1,11 @@
-# 🌐 Web Portfolio — goit-markup-hw-06
+# 🌐 Web Portfolio — WebStudio
 
 This project is part of the GoIT educational program. It is a multi-page responsive web portfolio demonstrating HTML and CSS skills, including form styling and validation. The project follows modern web development practices and implements adaptive design.
 
 ## 🔧 Technologies
 
 - HTML5
-- CSS3 (SASS/SCSS)
-- BEM methodology
+- CSS3
 - Responsive and adaptive layout
 - GitHub Pages — for deployment
 
@@ -21,7 +20,7 @@ This project is part of the GoIT educational program. It is a multi-page respons
 ## 🚀 How to View the Project
 
 Open the live demo:
-👉 [GitHub Pages](https://vitalii-mieliet.github.io/goit-markup-hw-06)
+👉 [GitHub Pages](https://vitalii-mieliet.github.io/web-studio)
 
 ## 📁 Project Structure
 
