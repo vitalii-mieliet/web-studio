@@ -1,6 +1,6 @@
 # 🌐 WebStudio
 
-This project is part of the GoIT educational program. It is a multi-page responsive web portfolio demonstrating HTML and CSS skills, including form styling and validation. The project follows modern web development practices and implements adaptive design.
+**WebStudio** - is a collaborative web development project built as part of the GoIT Full Stack Bootcamp. It is a single-page responsive web portfolio demonstrating HTML and CSS skills, including form styling and validation. The project follows modern web development practices and implements adaptive design.
 
 ## 🔧 Technologies
 
@@ -11,7 +11,7 @@ This project is part of the GoIT educational program. It is a multi-page respons
 
 ## ⚙️ Features
 
-- Multi-page portfolio layout
+- Single-page portfolio layout
 - Contact form with validation
 - Responsive and adaptive design
 - Semantic HTML structure
